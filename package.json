@@ -15,7 +15,6 @@
   "bugs": {
     "url": "https://github.com/vigetlabs/motorpool/issues"
   },
-
   "browserify": {
     "transform": [
       [
@@ -34,8 +33,7 @@
       ]
     ]
   },
-
-  "dependencies": {
+  "devDependencies": {
     "react": "~0.11.0",
     "reactify": "~0.14.0",
     "browserify": "~4.2.3",
