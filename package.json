@@ -1,0 +1,44 @@
+{
+  "name": "motorpool",
+  "version": "0.0.0",
+  "description": "Motorpool client-side React/Flux application",
+  "main": "app/index.jsx",
+  "scripts": {
+    "start": "watchify -o browser-bundle.js -v -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vigetlabs/motorpool"
+  },
+  "author": "Ryan Stenberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vigetlabs/motorpool/issues"
+  },
+
+  "browserify": {
+    "transform": [
+      [
+        "reactify", {
+          "harmony": true,
+          "extension": [
+            "jsx",
+            "js"
+          ],
+          "visitors": [
+            "jstransform/visitors/es6-arrow-function-visitors",
+            "jstransform/visitors/es6-class-visitors",
+            "jstransform/visitors/es6-object-concise-method-visitors"
+          ]
+        }
+      ]
+    ]
+  },
+
+  "dependencies": {
+    "react": "~0.11.0",
+    "reactify": "~0.14.0",
+    "browserify": "~4.2.3",
+    "envify": "~2.0.1"
+  }
+}
