@@ -1,0 +1,56 @@
+
+// Boilerplate Setup
+
+html,
+body
+  background-color: $body-bg
+  font-size: $base-font-size
+  height: 100%
+
+body
+  -webkit-font-smoothing: subpixel-antialiased
+  color: $charcoal
+  line-height: $base-line-height
+  font-family: "Open Sans"
+  margin: 0
+  padding: 0
+  width: 100%
+
+  *
+    +box-sizing(border-box)
+
+
+// Site Containers
+
+$sticky-tablet: 272px
+$sticky-notebook: 189px
+
+.site__container
+  +row
+
+.site__content
+  +row
+  position: relative
+
+
+// Normalize Overwrites
+
+
+p
+  margin: 0
+
+  & + &
+    margin-top: 1em
+
+  a
+    text-decoration: none
+    +transition(0.1s color ease-in-out, 0.1s border-color ease-in-out)
+
+img
+  max-width: 100%
+
+a:focus,
+input:focus,
+button:focus
+  outline: none
+

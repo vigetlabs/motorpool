@@ -1,0 +1,34 @@
+
+// Span Cols based on Grid
+
+@function span($cols)
+	$output: ""
+
+	@if ($cols == "1/2")
+		$output: 50%
+	@else if ($cols == "1/3")
+		$output: 33.333%
+	@else if ($cols == "1/4")
+		$output: 25%
+	@else
+		$output: ($column-width * $cols) + ($column-gutter * ($cols - 1))
+
+	@return $output
+
+
+// Offset Col based on Grid
+
+@function offset($cols)
+	@return ($column-width * $cols) + ($column-gutter * $cols)
+
+
+// Apply Gutter based on Grid
+
+@function gutter($cols)
+	@return ($column-gutter * $cols)
+
+
+// Percentage Based Widths based on Span
+
+@function space-span($space, $span: 1)
+	@return percentage($space / ($span-real-width * $span))

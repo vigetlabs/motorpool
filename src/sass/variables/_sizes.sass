@@ -1,0 +1,20 @@
+
+// Base Page Sizes
+
+$base-font-size   : 14px
+$base-line-height : (26px / $base-font-size)
+
+
+// Layout and Grid
+
+$total-columns   : 14
+$grid-max-width  : 1400px
+$page-max-width  : 1400px
+$column-gutter   : 0%
+$column-width    : (100 - ($column-gutter * ($total-columns - 1) ) ) / $total-columns
+$span-real-width : round($grid-max-width * ($column-width / 100%))
+
+
+// Page & Component specific size
+
+$sidebar-height : 56px

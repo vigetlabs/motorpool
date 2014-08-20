@@ -1,0 +1,55 @@
+
+// Page Header
+
+.site-sidebar
+  background-color: $charcoal
+  left: 0
+  position: fixed
+  top: 0
+  height: $sidebar-height
+  +span(14)
+
+  +breakpoint($notebook)
+    +span(3)
+    bottom: 0
+    height: auto
+
+  .button.-green
+    border-radius: 0
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+
+    // For now
+    display: none
+    +breakpoint($notebook)
+      display: block
+
+.site-sidebar-header
+  padding: 12px 70px
+
+  +breakpoint($notebook)
+    padding: 22px
+
+.site-logo
+  left: 18px
+  position: absolute
+  top: 16px
+  width: 40px
+
+  +breakpoint($notebook)
+    top: 36px
+    left: 22px
+    width: 61px
+
+.site-nav-toggler
+  background: none
+  position: absolute
+  border: none
+  outline: none
+  top: 12px
+  right: 16px
+
+  +breakpoint($notebook)
+    display: none

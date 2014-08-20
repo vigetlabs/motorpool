@@ -1,0 +1,31 @@
+
+.search-bar
+  +row
+
+  +breakpoint($notebook)
+    margin-top: 62px
+
+.search-bar-input
+  +row
+  +transition
+  background: none
+  border-radius: 22px
+  border: 1px solid $midnight
+  color: #fff
+  font-size: 12px
+  padding: 0.5em 3em 0.5em 1em
+
+  &:focus
+    border-color: #fff
+
+  +breakpoint($notebook)
+    font-size: 14px
+
+  +placeholder
+    color: $grey
+
+  +breakpoint($notebook)
+    margin: 22px 0
+
+.search-bar-submit
+  +row

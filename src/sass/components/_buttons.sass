@@ -1,0 +1,46 @@
+
+// Buttons
+
+=button($bg-color: $darker-grey, $text-color: #fff, $darken: 5%)
+  +transition
+  background: $bg-color
+  border-radius: 32px
+  border: 0
+  color: $text-color
+  display: block
+  font-size: 14px
+  line-height: 1
+  max-width: 100%
+  padding: 0.5em 1em
+  position: relative
+  text-align: center
+  text-decoration: none
+
+  +hover
+    background: darken($bg-color, 5%)
+
+
+// Colors
+
+.button
+  &.-green
+    +button($green, #fff)
+    padding: 1.2em
+
+  &.-hollow-grey
+    +button(transparent, $light-grey)
+    border: 1px solid $light-grey
+    font-size: 12px
+    text-transform: uppercase
+
+  &.-hollow-green
+    +button(transparent, $green)
+    border: 1px solid $green
+
+  &.-small
+    font-size: 12px
+    padding: 0.5em 1em
+
+  .page-actions &
+    padding: 1em 1.6em
+    font-size: 15px

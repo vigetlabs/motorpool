@@ -20,10 +20,10 @@ var Ride = React.createClass({
   },
 
   render() {
-    riders = this.props.riders
+    var riders = this.props.riders
 
     return (
-      <div className="ride rounded">
+      <li className="ride rounded">
         <span>
           <strong>{this.props.driver}</strong>
           {this.props.riders.length} / {this.props.capacity}
@@ -32,7 +32,7 @@ var Ride = React.createClass({
         <ul>
           { riders.map(this.renderRider) }
         </ul>
-      </div>
+      </li>
     )
   }
 })

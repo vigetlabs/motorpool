@@ -8,14 +8,12 @@ var Event = React.createClass({
 
   render() {
     return (
-      <div className='event'>
+      <div className="main">
         <span>
           <h1>{this.props.name}</h1>
           <button className='transparent green-txt right rounded'>Edit</button>
         </span>
-
         <hr />
-
         <Destination />
       </div>
     )

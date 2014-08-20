@@ -1,0 +1,47 @@
+
+// Basic Nav
+
+.nav
+  +row
+  position: relative
+  width: 100%
+
+  > ul
+    +list
+
+    > li
+      display: block
+      text-align: center
+      width: 100%
+
+      > a
+        +transition
+        display: block
+
+
+// Main Nav
+
+.main-nav
+  @extend .nav
+  padding-bottom: 8px
+  width: 100%
+  overflow-y: auto
+
+  // For now
+  display: none
+  +breakpoint($notebook)
+    display: block
+
+  > ul
+    > li
+      a
+        +transition
+        color: #fff
+        padding: 0.5em 2em
+        text-decoration: none
+
+        +breakpoint($notebook)
+          text-align: left
+
+        +hover
+          background: $grey-hover

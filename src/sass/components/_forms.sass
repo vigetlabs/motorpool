@@ -1,0 +1,78 @@
+
+.form
+  &.-location
+
+.input
+  +transition
+  padding: 0.6em
+  width: 100%
+
+  &.-text,
+  &.-textarea
+    background: $form-input-bg
+    border: 1px solid $form-input-border
+    outline: none
+
+  &.-textarea
+    height: 138px
+
+  &:active,
+  &:focus
+    background: #fff
+    border: 1px solid $green
+
+.label
+  display: block
+  font-size: 11px
+  font-weight: bold
+  padding-bottom: 4px
+  text-transform: uppercase
+
+.form-rows
+  +list
+
+  +breakpoint($notebook)
+    +inline-list
+
+  .-location &
+    font-size: 0
+
+    > li
+      display: block
+      font-size: $base-font-size
+      padding-bottom: 16px
+      vertical-align: top
+
+      &:last-child
+        padding-bottom: 0
+
+      +breakpoint($notebook)
+        display: inline-block
+        padding-bottom: 0
+        width: 33.33%
+
+        &:first-child
+          padding-right: 10px
+
+        &:nth-child(2)
+          padding-left: 10px
+          padding-right: 10px
+
+        &:last-child
+          padding-left: 10px
+
+
+.form-row
+  &.-full
+    +span(14)
+    padding-top: 14px
+
+    .-half
+      padding-right: 6px
+
+      &:last-child
+        padding-left: 6px
+        padding-right: 0
+
+  &.-half
+    +span(7)

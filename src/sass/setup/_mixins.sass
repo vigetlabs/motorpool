@@ -1,0 +1,166 @@
+
+// Hover & Focus
+
+=hover
+  &:hover
+    @content
+
+  .no-touch &
+    &:focus,
+    &:hover
+      @content
+
+
+// Grid Offset
+
+=offset($cols)
+  margin-left: offset($cols) !important
+
+
+// Gutter Offset
+
+=gutter($cols)
+  margin-left: gutter($cols)
+
+
+// Grid Span
+
+=span($cols)
+  float: left
+  width: span($cols)
+
+  &:not(:first-child)
+    float: left
+
+
+// Layout Helpers
+
+=row
+  +clearfix
+  float: left
+  position: relative
+  width: 100%
+
+=grid-row
+  +row
+  padding: 0 22px
+
+// Placeholder Content
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+  &:placeholder
+    @content
+
+
+// Vertically Centered Child Element
+
+=vertically-centered-child
+  +transform(translateY(-50%))
+  top: 50%
+
+
+// Generated Pseudo Element
+
+=pseudo
+  content: ''
+  position: absolute
+  top: 0
+
+=fill($val: 0)
+  bottom: #{$val}
+  left: #{$val}
+  position: absolute
+  right: #{$val}
+  top: #{$val}
+
+
+// Clear Row
+
+=clearfix
+  &:before,
+  &:after
+    content: ""
+    display: table
+
+  &:after
+    clear: both
+
+
+// Layout Helpers
+
+=wrap
+  +clearfix
+  margin: 0 auto
+  max-width: $page-max-width
+  width: 100%
+
+
+// Transitioning Content
+
+=hidden-transition-content
+  opacity: 0
+  pointer-events: none
+  visibility: hidden
+
+=visible-transition-content
+  opacity: 1
+  pointer-events: auto
+  visibility: visible
+
+
+// Hide Text
+
+=hide-text
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+
+// Inline List
+
+=list($clear: true)
+  font-size: 0
+  list-style: none
+  margin: 0
+  padding: 0
+
+  > li
+    @if $clear
+      +clearfix
+    display: block
+    font-size: $base-font-size
+    margin: 0
+    padding: 0
+
+
+// Inline List
+
+=inline-list
+  font-size: 0
+  list-style: none
+  margin: 0
+  padding: 0
+
+  > li
+    display: inline-block
+    font-size: $base-font-size
+    margin: 0
+    padding: 0
+
+
+// Icon
+
+=icon($icon)
+  content: "#{$icon}"
+  font-style: normal

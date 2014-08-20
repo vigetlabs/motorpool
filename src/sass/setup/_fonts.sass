@@ -1,0 +1,11 @@
+
+// Font Face Mixin to Override compass default
+
+=font-face($font-family, $file-path, $weight: normal, $style: normal )
+	@font-face
+		font-family: $font-family
+		src: font-url('#{$file-path}.eot')
+		src: font-url('#{$file-path}.eot' + '?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype'), font-url('#{$file-path}.svg#' + '#{$font-family}') format("svg")
+		font-weight: $weight
+		font-style: $style
+
