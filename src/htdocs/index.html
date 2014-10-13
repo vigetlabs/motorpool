@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Motorpool</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link rel="stylesheet", type="text/css" href="/application.css">
 </head>
 <body>
@@ -37,93 +37,91 @@
       <button class="button -hollow-green">New Route</button>
     </div>
 
-    <section class="section">
+    <section class="section -ride-select">
       <header class="section-header">
         <h2>
           <span>Viget HQ</span>
           <i class="arrow-icon"></i>
           <span>Meadow Event Park</span>
         </h2>
+        <div class="section-actions">
+          <button class="button -hollow-grey -small">Cancel</button>
+          <button class="button -hollow-green -small">Save</button>
+        </div>
       </header>
       <div class="section-main">
-        <form action="" class="form -location">
-          <ol class="form-rows">
-            <li>
-              <h3>
-                Departure
-                <span class="location-time">
-                  <img src="/images/clock.svg">
-                  9:00 AM
-                </span>
-              </h3>
-              <div class="form-row -full">
-                <label class="label" for="">Address</label>
-                <input type="text" class="input -text">
-              </div>
-              <div class="form-row -full">
-                <div class="form-row -half">
-                  <label class="label" for="">State</label>
-                  <input type="text" class="input -text">
-                </div>
-                <div class="form-row -half">
-                  <label class="label" for="">City</label>
-                  <input type="text" class="input -text">
-                </div>
-              </div>
-            </li>
-            <li>
-              <h3>
-                Arrival
-                <span class="location-time">
-                  <img src="/images/clock.svg">
-                  9:00 AM
-                </span>
-              </h3>
-              <div class="form-row -full">
-                <label class="label" for="">Address</label>
-                <input type="text" class="input -text">
-              </div>
-              <div class="form-row -full">
-                <div class="form-row -half">
-                  <label class="label" for="">State</label>
-                  <input type="text" class="input -text">
-                </div>
-                <div class="form-row -half">
-                  <label class="label" for="">City</label>
-                  <input type="text" class="input -text">
-                </div>
-              </div>
-            </li>
-            <li>
-              <h3>Attendees</h3>
-              <div class="form-row -full">
-                <textarea type="text" class="input -textarea"></textarea>
-              </div>
-            </li>
-          </ol>
-        </form>
+        <ul class="ride-select -riders">
+          <li>john@doe@viget.com</li>
+          <li>john@doe@viget.com</li>
+          <li>john@doe@viget.com</li>
+          <li>john@doe@viget.com</li>
+          <li>john@doe@viget.com</li>
+          <li>john@doe@viget.com</li>
+          <li>john@doe@viget.com</li>
+          <li>john@doe@viget.com</li>
+        </ul>
+        <ul class="ride-select -drivers">
+          <li>
+            <h4>
+              driver@test@viget.com
+              <span class="driver-capacity">4</span>
+            </h4>
+            <ul class="driver-riders">
+              <li>john@doe@viget.com</li>
+              <li>john@doe@viget.com</li>
+              <li>john@doe@viget.com</li>
+            </ul>
+          </li>
+          <li>
+            <h4>
+              driver@test@viget.com
+              <span class="driver-capacity">4</span>
+            </h4>
+          </li>
+          <li>
+            <h4>
+              driver@test@viget.com
+              <span class="driver-capacity">4</span>
+            </h4>
+          </li>
+          <li>
+            <h4>
+              driver@test@viget.com
+              <span class="driver-capacity">4</span>
+            </h4>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-submit">
+        <button class="button -hollow-green -center">Assign Riders</button>
       </div>
     </section>
 
-    <section class="section">
+    <!-- <section class="section">
       <header class="section-header">
         <h2>
           <span>Viget HQ</span>
           <i class="arrow-icon"></i>
           <span>Meadow Event Park</span>
+          <button class="button -hollow-grey -small">Edit</button>
         </h2>
+        <div class="section-actions">
+          <button class="button -hollow-grey -small">Cancel</button>
+          <button class="button -hollow-green -small">Save</button>
+        </div>
       </header>
       <div class="section-main">
         <form action="" class="form -location">
           <ol class="form-rows">
             <li>
-              <h3>
+              <h4>
                 Departure
                 <span class="location-time">
                   <img src="/images/clock.svg">
                   9:00 AM
                 </span>
-              </h3>
+              </h4>
               <div class="form-row -full">
                 <label class="label" for="">Address</label>
                 <input type="text" class="input -text">
@@ -140,13 +138,13 @@
               </div>
             </li>
             <li>
-              <h3>
+              <h4>
                 Arrival
                 <span class="location-time">
                   <img src="/images/clock.svg">
                   9:00 AM
                 </span>
-              </h3>
+              </h4>
               <div class="form-row -full">
                 <label class="label" for="">Address</label>
                 <input type="text" class="input -text">
@@ -163,7 +161,7 @@
               </div>
             </li>
             <li>
-              <h3>Attendees</h3>
+              <h4>Attendees</h4>
               <div class="form-row -full">
                 <textarea type="text" class="input -textarea"></textarea>
               </div>
@@ -171,7 +169,7 @@
           </ol>
         </form>
       </div>
-    </section>
+    </section> -->
 
 
     <!--
