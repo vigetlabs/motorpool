@@ -1,53 +1,48 @@
 {
-  "name": "motorpool",
-  "version": "0.0.0",
-  "description": "Motorpool client-side React/Flux application",
-  "scripts": {
-    "start": "gulp default"
-  },
+  "name": "gulp-starter",
+  "version": "2.0.0",
+  "description": "Gulp starter with common tasks and scenarios",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vigetlabs/motorpool"
+    "url": "git://github.com/greypants/gulp-starter.git"
   },
-  "author": "Ryan Stenberg",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vigetlabs/motorpool/issues"
+  "scripts": {
+    "postinstall": "gulp"
   },
-  "browserify": {
-    "transform": [
-      [
-        "reactify",
-        {
-          "harmony": true,
-          "extension": [
-            "jsx",
-            "js"
-          ],
-          "visitors": [
-            "jstransform/visitors/es6-arrow-function-visitors",
-            "jstransform/visitors/es6-class-visitors",
-            "jstransform/visitors/es6-object-concise-method-visitors"
-          ]
-        }
-      ]
-    ]
-  },
-  "devDependencies": {
-    "browser-sync": "~1.3.5",
-    "browserify": "~4.2.3",
-    "envify": "~2.0.1",
-    "gulp": "^3.8.0",
+  "dependencies": {
+    "babelify": "^5.0.3",
+    "browser-sync": "^2.0.0",
+    "browserify": "^9.0.3",
+    "del": "^1.1.1",
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "^2.0.0",
     "gulp-changed": "^0.4.1",
+    "gulp-filesize": "0.0.6",
+    "gulp-iconfont": "^1.0.0",
     "gulp-imagemin": "^0.6.2",
+    "gulp-minify-css": "^0.3.11",
     "gulp-notify": "^1.4.2",
-    "gulp-ruby-sass": "^0.7.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-rev": "^3.0.1",
+    "gulp-rev-collector": "^0.1.3",
+    "gulp-sass": "~1.3.1",
+    "gulp-sequence": "^0.3.2",
+    "gulp-sourcemaps": "^1.2.8",
+    "gulp-swig": "^0.7.4",
+    "gulp-uglify": "^1.0.2",
     "gulp-util": "^3.0.0",
+    "gulp-watch": "^4.1.1",
+    "karma": "^0.12.31",
+    "karma-browserify": "^3.0.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-coffee-preprocessor": "^0.2.1",
+    "karma-mocha": "^0.1.10",
+    "karma-nyan-reporter": "0.0.50",
+    "karma-sinon-chai": "^0.3.0",
+    "lodash": "^2.4.1",
     "pretty-hrtime": "~0.2.1",
-    "react": "~0.11.0",
-    "reactify": "~0.14.0",
     "require-dir": "^0.1.0",
     "vinyl-source-stream": "~0.1.1",
-    "watchify": "~0.10.2"
+    "watchify": "^2.4.0"
   }
 }

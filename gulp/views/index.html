@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Motorpool</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet", type="text/css" href="/application.css">
-</head>
-<body>
-  <aside class="site-sidebar">
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+ <aside class="site-sidebar">
     <header class="site-sidebar-header">
       <img src="/images/motorpool.svg" alt="Motopool" class="site-logo">
       <div class="search-bar">
@@ -172,48 +164,46 @@
         </form>
       </div>
     </section>
-
-
-    <!--
-      DESTINATION
-      <section class="section">
-        <header class="section-header">
-          <div class="location location-departure">
-            <h2 class="location-name">Fair Oaks Mall</h2>
-            <span class="location-time">May 2, 2014 @ 9:00AM</span>
-          </div>
-          <div class="location location-arrival">
-            <h2 class="location-name">Viget Labs</h2>
-            <span class="location-time">May 4, 2014 @ 9:00PM</span>
-          </div>
-          <button class="button -hollow-grey -small">Edit Destination</button>
-        </header>
-        <section class="rides-wrapper">
-          <ul class="rides-header">
-            <li>
-              <span>Motor Pool</span>
-              <span>Capacity</span>
-            </li>
-            <li>
-              <span>Motor Pool</span>
-              <span>Capacity</span>
-            </li>
-          </ul>
-          <ul class="rides-list">
-            <li>
-              <ul class="">
-                <li></li>
-              </ul>
-            </li>
-            <li>
-              <ul class="">
-                <li></li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-      </section>
-     -->
   </main>
-</body>
-</html>
+{% endblock %}
+
+<!--
+  DESTINATION
+  <section class="section">
+    <header class="section-header">
+      <div class="location location-departure">
+        <h2 class="location-name">Fair Oaks Mall</h2>
+        <span class="location-time">May 2, 2014 @ 9:00AM</span>
+      </div>
+      <div class="location location-arrival">
+        <h2 class="location-name">Viget Labs</h2>
+        <span class="location-time">May 4, 2014 @ 9:00PM</span>
+      </div>
+      <button class="button -hollow-grey -small">Edit Destination</button>
+    </header>
+    <section class="rides-wrapper">
+      <ul class="rides-header">
+        <li>
+          <span>Motor Pool</span>
+          <span>Capacity</span>
+        </li>
+        <li>
+          <span>Motor Pool</span>
+          <span>Capacity</span>
+        </li>
+      </ul>
+      <ul class="rides-list">
+        <li>
+          <ul class="">
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="">
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </section>
+ -->
