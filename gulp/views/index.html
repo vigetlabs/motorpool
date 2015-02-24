@@ -3,14 +3,17 @@
 {% block content %}
  <aside class="site-sidebar">
     <header class="site-sidebar-header">
-      <img src="/images/motorpool.svg" alt="Motopool" class="site-logo">
-      <div class="search-bar">
-        <form action="">
-          <input type="text" class="search-bar-input" placeholder="Search">
-        </form>
-      </div>
-      <button class="site-nav-toggler">
-        <img src="/images/burger-nav.svg" alt="Toggle Menu">
+      <h1 class="site-logo icon -logo">
+        <span class="screenreader">Motorpool</span>
+      </h1>
+
+      <form class="search-bar" action="">
+        <input type="text" class="search-bar-input" placeholder="Search">
+        <button type="submit" class="search-bar__button icon -search"><span class="screenreader">Search</span></button>
+      </form>
+
+      <button class="site-nav-toggler icon -burger-nav">
+        <span class="screenreader">Toggle Nav</span>
       </button>
     </header>
     <nav class="main-nav">
@@ -44,7 +47,7 @@
               <h3>
                 Departure
                 <span class="location-time">
-                  <img src="/images/clock.svg">
+                  <span class="icon -clock"></span>
                   9:00 AM
                 </span>
               </h3>
@@ -67,7 +70,7 @@
               <h3>
                 Arrival
                 <span class="location-time">
-                  <img src="/images/clock.svg">
+                  <span class="icon -clock"></span>
                   9:00 AM
                 </span>
               </h3>
@@ -112,7 +115,7 @@
               <h3>
                 Departure
                 <span class="location-time">
-                  <img src="/images/clock.svg">
+                  <span class="icon -clock"></span>
                   9:00 AM
                 </span>
               </h3>
@@ -135,7 +138,7 @@
               <h3>
                 Arrival
                 <span class="location-time">
-                  <img src="/images/clock.svg">
+                  <span class="icon -clock"></span>
                   9:00 AM
                 </span>
               </h3>
