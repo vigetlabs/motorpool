@@ -1,68 +1,93 @@
-{% extends 'layouts/application.html' %}
+{% extends 'layouts/event.html' %}
 
 {% block content %}
-    <h1 class="page-title">TTT: Kayaking in the River</h1>
-    <div class="page-actions">
-      <button class="button -hollow-green">New Route</button>
-    </div>
-
-    <section class="section -ride-select">
-      <header class="section-header">
-        <h2>
-          <span>Viget HQ</span>
-          <i class="arrow-icon"></i>
-          <span>Meadow Event Park</span>
-        </h2>
-        <div class="section-actions">
-          <button class="button -hollow-grey -small">Cancel</button>
-          <button class="button -hollow-green -small">Save</button>
+  {% parent %}
+  <section class="section route">
+    <header class="route__header section-header">
+      <div class="route__points">
+        <div class="route__point -from">
+          <h3 class="route__point__title">Meadow Event Park</h3>
+          <p class="route__when"></p>
+          <date>May 2, 2015</date> at <time> @ 9:00am</time>
         </div>
-      </header>
-      <div class="section-main">
-        <ul class="ride-select -riders">
-          <li>john@doe@viget.com</li>
-          <li>john@doe@viget.com</li>
-          <li>john@doe@viget.com</li>
-          <li>john@doe@viget.com</li>
-          <li>john@doe@viget.com</li>
-          <li>john@doe@viget.com</li>
-          <li>john@doe@viget.com</li>
-          <li>john@doe@viget.com</li>
-        </ul>
-        <ul class="ride-select -drivers">
-          <li>
-            <h4>
-              driver@test@viget.com
-              <span class="driver-capacity">4</span>
-            </h4>
-            <ul class="driver-riders">
-              <li>john@doe@viget.com</li>
-              <li>john@doe@viget.com</li>
-              <li>john@doe@viget.com</li>
-            </ul>
-          </li>
-          <li>
-            <h4>
-              driver@test@viget.com
-              <span class="driver-capacity">4</span>
-            </h4>
-          </li>
-          <li>
-            <h4>
-              driver@test@viget.com
-              <span class="driver-capacity">4</span>
-            </h4>
-          </li>
-          <li>
-            <h4>
-              driver@test@viget.com
-              <span class="driver-capacity">4</span>
-            </h4>
-          </li>
-        </ul>
+        <div class="route__point -to">
+          <h3 class="route__point__title">Viget HQ</h3>
+          <p class="route__when"></p>
+          <date>May 2, 2015</date> at <time> @ 11:00am</time>
+        </div>
       </div>
-      <div class="section-submit">
-        <button class="button -hollow-green -center">Assign Riders</button>
+
+      <div class="section-actions">
+        <button class="button -hollow-grey -small">Edit</button>
       </div>
+    </header>
+
+    <section>
+      <h3>Vehicles</h3>
+      <ul class="vehicle-list list-basic">
+        <li class="vehicle">
+            <div class="inner">
+              <p class="route__driver passenger -driver">jonathan.doegerhtinson@viget.com</p>
+              <p class="vehicle__capacity">3/5 <button class="button -small -hollow-grey">Edit</button></p>
+              <ul class="list-basic">
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="vehicle">
+            <div class="inner">
+              <p class="route__driver passenger -driver">jonathan.doegerhtinson@viget.com</p>
+              <p class="vehicle__capacity">1/5 <button class="button -small -hollow-grey">Edit</button></p>
+              <ul class="list-basic">
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="vehicle">
+            <div class="inner">
+              <p class="route__driver passenger -driver">jonathan.doegerhtinson@viget.com</p>
+              <p class="vehicle__capacity">5/5 <button class="button -small -hollow-grey">Edit</button></p>
+              <ul class="list-basic">
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+                <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+              </ul>
+            </div>
+            <li class="vehicle">
+              <div class="inner">
+
+                <p class="route__driver passenger -driver"><i class="icon -driver"></i>jonathan.doegerhtinson@viget.com</p>
+                <p class="vehicle__capacity">3/5 <button class="button -small -hollow-grey">Edit</button></p>
+                <ul class="list-basic">
+                  <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+                  <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+                </ul>
+              </div>
+          </li>
+      </ul>
     </section>
+
+    <section>
+      <h3>Unassigned</h3>
+      <ul class="route__pool">
+        <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+        <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+        <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+        <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+        <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+        <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+        <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+        <li class="passenger" draggable="true">jonathan.doegerhtinson@viget.com</li>
+      </ul>
+    </section>
+    <section class="section-submit">
+      <button class="button -hollow-green -center">Assign Riders</button>
+    </section>
+  </section>
 {% endblock %}
