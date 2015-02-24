@@ -43,6 +43,7 @@
     "karma-sinon-chai": "^0.3.0",
     "lodash": "^2.4.1",
     "pretty-hrtime": "~0.2.1",
+    "react": "^0.12.2",
     "require-dir": "^0.1.0",
     "vinyl-source-stream": "~0.1.1",
     "watchify": "^2.4.0"

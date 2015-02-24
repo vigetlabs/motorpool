@@ -4,14 +4,43 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{% block title %}Motorpool{% endblock %}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
   <link rel="stylesheet" href="assets/stylesheets/global.css">
   {% block head %}{% endblock %}
 </head>
 <body>
+  <aside class="site-sidebar">
+    <header class="site-sidebar-header">
+      <h1 class="site-logo">
+        <a href="/" class="icon -logo">
+          <span class="screenreader">Motorpool</span>
+        </a>
+      </h1>
+
+      <form class="search-bar" action="">
+        <input type="text" class="search-bar-input" placeholder="Search">
+        <button type="submit" class="search-bar__button icon -search"><span class="screenreader">Search</span></button>
+      </form>
+
+      <button class="site-nav-toggler icon -burger-nav">
+        <span class="screenreader">Toggle Nav</span>
+      </button>
+    </header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="route-form.html">route-form</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+    </nav>
+    <a href="#TODO" class="button -green">Create New Event</a>
+  </aside>
+  <main class="site-main">
   {% block content %}{% endblock %}
-  <script src="assets/javascripts/global.js"></script>
+  </main>
+  <!-- <script src="assets/javascripts/app.js"></script> -->
   {% block javascript %}{% endblock %}
 </body>
 </html>

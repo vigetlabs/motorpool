@@ -17,12 +17,25 @@
   padding-bottom: 12px
   border-bottom: 1px solid $light-grey
 
+  h2
+    float: left
+
+    button
+      position: relative
+      top: -3px
+
+  button
+    display: inline-block !important
+
   .arrow-icon:after
     +icon($arrow)
     font-size: 16px
     color: $charcoal
     position: relative
     top: -2px
+
+.section-actions
+  float: right
 
 .section-main
   +row

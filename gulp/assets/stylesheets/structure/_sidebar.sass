@@ -8,6 +8,7 @@
   top: 0
   height: $sidebar-height
   +span(14)
+  z-index: 11
 
   +breakpoint($notebook)
     +span(3)
@@ -36,8 +37,15 @@
   left: 14px
   position: absolute
   top: 9px
-  color: #fff
   font-size: 40px
+
+  a
+    color: #fff
+    text-decoration: none
+    +transition
+
+    &:hover
+      color: $green
 
   +breakpoint($notebook)
     font-size: 72px

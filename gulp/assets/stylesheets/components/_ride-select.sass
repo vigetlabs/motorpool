@@ -1,0 +1,32 @@
+.ride-select
+  height: 150px
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  margin: 5px 0
+  padding: 10px 0
+
+  &:first-child
+    border-bottom: 2px solid $light-grey
+
+.ride-select
+  +list
+
+  h4
+    margin-bottom: 0
+
+  &.-riders
+    padding-left: 16px
+
+  &.-drivers
+    > li
+      border-radius: 16px
+      border: 1px solid $light-grey
+      font-size: 14px
+      padding: 8px 16px
+      margin-bottom: 4px
+
+      ul
+        margin-top: 4px
+
+.driver-riders
+  +list
