@@ -1,0 +1,30 @@
+.card
+  +transition
+  -webkit-appearance: none
+  appearance: none
+  border: none
+  box-shadow: 0 1px 2px rgba(black, 0.1)
+  display: block
+  font-size: 12px
+  margin-bottom: 3%
+  margin-top: 0
+  background: #fff
+
+  main
+    padding: 3%
+
+  +breakpoint($tablet)
+    font-size: 14px
+
+  +breakpoint($desktop)
+    font-size: 16px
+
+.card__header
+  background: $charcoal
+  color: #fff
+  padding: 1% 3%
+  overflow: hidden
+  font-size: 1.2em
+
+  > *
+    margin: 0

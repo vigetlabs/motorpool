@@ -1,0 +1,32 @@
+{% extends 'layouts/event--user.html' %}
+
+{% block content %}
+{% parent %}
+
+<div class="container">
+  <header class="page-header">
+    <h2 class="left">Select Routes</h2>
+
+    <button class="button -hollow-green right">
+      + New Route
+    </button>
+  </header>
+
+  <section class="section card route -selected -collapsed">
+    {% include 'shared/route-header.html' %}
+  </section>
+
+  <section class="section card route -collapsed">
+    {% include 'shared/route-header.html' %}
+  </section>
+
+  <section class="section card route">
+    {% include 'shared/route-header.html' %}
+  </section>
+
+  <a href="user-vehicle-assignment.html" class="section card route -button">
+    Continue
+  </a>
+</div>
+
+{% endblock %}

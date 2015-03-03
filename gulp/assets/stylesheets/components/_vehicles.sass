@@ -1,0 +1,46 @@
+.passenger
+  overflow: hidden
+  padding: .2em .5em .2em 2em
+  position: relative
+  text-overflow: ellipsis
+
+  &:before
+    font-size: 1.5em
+    left: 0
+    position: absolute
+    top: .23em
+
+.passenger-list
+  align-content: stretch
+  align-items: center
+  display: flex
+  flex-align: center
+  flex-wrap: wrap
+
+  li
+    margin-right: 5px
+
+.vehicle
+  border: 1px solid $light-grey
+  margin-bottom: 4px
+  overflow: hidden
+  position: relative
+
+  &:hover
+    background: $light-grey
+
+  &.-selected
+    background: $green
+
+.vehicle__driver
+  font-weight: bold
+  margin-bottom: 1em
+  background-color: transparent
+
+  &:before
+    color: $green
+
+.vehicle__capacity
+  font-weight: bold
+  color: $charcoal
+

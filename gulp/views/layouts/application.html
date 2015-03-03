@@ -10,37 +10,14 @@
   {% block head %}{% endblock %}
 </head>
 <body>
-  <aside class="site-sidebar">
-    <header class="site-sidebar-header">
-      <h1 class="site-logo">
-        <a href="/" class="icon -logo">
-          <span class="screenreader">Motorpool</span>
-        </a>
-      </h1>
-
-      <form class="search-bar" action="">
-        <input type="text" class="search-bar-input" placeholder="Search">
-        <button type="submit" class="search-bar__button icon -search"><span class="screenreader">Search</span></button>
-      </form>
-
-      <button class="site-nav-toggler icon -menu">
-        <span class="screenreader">Toggle Nav</span>
-      </button>
-    </header>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="route-form.html">route-form</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-      </ul>
-    </nav>
-    <a href="#TODO" class="button -green">Create New Event</a>
-  </aside>
-  <main class="site-main">
-  {% block content %}{% endblock %}
+  {% include '../shared/nav.html' %}
+  <main class="site-main page">
+    <div class="flex">
+      <h2 class="site-nav-title">{% block page-title %}{% endblock %}</h2>
+      {% block content %}{% endblock %}
+    </div>
   </main>
-  <!-- <script src="assets/javascripts/app.js"></script> -->
+  <script src="assets/javascripts/temp.js"></script>
   {% block javascript %}{% endblock %}
 </body>
 </html>

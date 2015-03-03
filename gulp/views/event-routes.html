@@ -1,0 +1,89 @@
+{% extends 'layouts/event.html' %}
+
+{% block content %}
+{% parent %}
+<section class="section route">
+  {% include 'shared/route-header.html' %}
+</section>
+
+<section class="section">
+ <header class="route__header section-header">
+    <div class="route__points">
+      <div class="route__point -from">
+        <h3 class="route__point__title">Meadow Event Park</h3>
+      </div>
+      <div class="route__point -to">
+        <h3 class="route__point__title">Viget HQ</h3>
+      </div>
+    </div>
+
+    <div class="section-actions">
+      <button class="button -hollow-grey -small">Edit</button>
+    </div>
+  </header>
+  <div class="section-main">
+    <form action="" class="form -location">
+      <ol class="form-rows">
+        <li>
+          <h4>
+            Departure
+          </h4>
+          <div class="form -full">
+            <select name="" id="">
+              <option value="">Viget HQ</option>
+              <option value="">Meadow Event Park</option>
+              <option selected value="">New</option>
+            </select>
+          </div>
+          <div class="form-row -full">
+            <label class="label" for="">Address</label>
+            <input type="text" class="input -text">
+          </div>
+          <div class="form-row -full">
+            <div class="form-row -half">
+              <label class="label" for="">State</label>
+              <input type="text" class="input -text">
+            </div>
+            <div class="form-row -half">
+              <label class="label" for="">City</label>
+              <input type="text" class="input -text">
+            </div>
+          </div>
+          <div class="form-row -full">
+            <div class="form-row -half">
+              <label class="label" for="">Zip</label>
+              <input type="text" class="input -text">
+            </div>
+
+            <div class="form-row -half">
+              <label class="label" for="">Date/Time</label>
+              <input type="text" class="input -text">
+            </div>
+          </div>
+        </li>
+        <li>
+          <h4>
+            Arrival
+          </h4>
+          <div class="form -full">
+            <select name="" id="">
+              <option value="">Viget HQ</option>
+              <option value="">Meadow Event Park</option>
+              <option selected value="">New</option>
+            </select>
+          </div>
+        </li>
+      </ol>
+    </form>
+  </div>
+</section>
+
+<section class="section route">
+  <button class="button -hollow-green">+ New Route</button>
+</section>
+
+<div class="page-actions">
+  <button class="button -hollow-green">Next</button>
+</div>
+
+{% endblock %}

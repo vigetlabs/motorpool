@@ -1,0 +1,97 @@
+.site-nav__header
+  display: flex
+  min-height: $nav-height
+
+.site-nav__content
+  display: flex
+  flex-grow: 1
+  align-items: center
+  text-align: center
+  opacity: 0
+  transition: all 0.25s ease-out
+
+  .site-nav.-open &
+    opacity: 1
+    transition: all 0.25s ease-out 0.25s
+
+  nav
+    width: 100%
+    max-width: 320px
+    margin: auto
+
+.site-nav
+  background-color: $charcoal
+  position: absolute
+  width: 100%
+  z-index: 11
+  transition: all 0.25s ease-out
+  height: $nav-height
+  overflow: hidden
+
+
+  &.-open
+    height: calc(100%)
+    -webkit-overflow-scrolling: touch
+    overflow: auto
+
+    .main-nav,
+    .button.-green
+      display: block
+      height: auto
+
+  +breakpoint($notebook)
+    +span(3)
+    bottom: 0
+
+  .button.-green
+    // For now
+    display: none
+    +breakpoint($notebook)
+      display: block
+
+.site-nav__header
+  height: $nav-height
+  width: 100%
+
+
+.site-logo
+  font-size: 40px
+  height: $nav-height
+  line-height: 1.5
+  max-width: 60px
+
+  a
+    +transition
+    color: #fff
+    text-decoration: none
+
+    &:hover
+      color: $green
+
+.site-nav__toggle
+  background: none
+  border: none
+  color: #fff
+  font-size: 24px
+  max-width: 60px
+  outline: none
+
+  +breakpoint($notebook)
+    display: none
+
+
+// Main Nav
+.site-nav__links
+  +list-basic
+
+  a
+    +transition
+    color: #fff
+    padding: 0.5em 2em
+    text-decoration: none
+
+    +breakpoint($notebook)
+      text-align: left
+
+    +hover
+      background: $grey-hover

@@ -1,0 +1,17 @@
+{% extends 'layouts/event.html' %}
+
+{% block content %}
+  {% parent %}
+
+  <section class="section">
+    <h3>People</h3>
+    <ul class="people-list -unassigned">
+      {% for i in [0,2,3,4,5,6,6,6,6,6] %}
+        <li>
+          <input type="checkbox"><a href="#person">rysten@viget.com</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <button class="button -green">Assign Routes</button>
+  </section>
+{% endblock %}

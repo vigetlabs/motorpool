@@ -10,9 +10,9 @@ module.exports = {
 
   browserify: {
     bundleConfigs: [{
-      entries: sourceAssets + '/javascripts/app.jsx',
+      entries: sourceAssets + '/javascripts/temp.js',
       dest: publicAssets + '/javascripts',
-      outputName: 'app.js',
+      outputName: 'temp.js',
       transform: ['babelify'],
       extensions: ['.jsx', '.js']
     }]

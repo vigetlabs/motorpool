@@ -1,0 +1,28 @@
+{% extends 'layouts/event--user.html' %}
+{% block page-title %}Route: Viget HQ to Meadow Event Park{% endblock %}
+
+{% block content %}
+  {% parent %}
+
+  <div class="container">
+    <ul class="vehicle-list list-basic">
+    {% for i in [0,0,0,0] %}
+      <li class="vehicle card">
+        <header class="card__header">
+          <p class="vehicle__driver passenger icon -driver">
+            jonathan.doegerhtinson@viget.com
+          </p>
+        </header>
+        <main>
+          <h4 class="vehicle__capacity">Passengers: 3/5</h4>
+          <ul class="passenger-list list-basic">
+            <li class="passenger icon -clock -me">jonathan.doegerhtinson@viget.com</li>
+            <li class="passenger icon -clock">john.doe@viget.com</li>
+            <li class="passenger icon -clock">barn@viget.com</li>
+          </ul>
+        </main>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

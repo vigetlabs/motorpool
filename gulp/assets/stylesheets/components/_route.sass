@@ -1,0 +1,84 @@
+.route
+  +breakpoint($tablet)
+    padding: 40px
+    font-size: 15px
+    margin-bottom: 20px
+
+  &.-selected
+    background-color: $green
+
+    *
+      color: #fff !important
+
+  &.-collapsed
+    .route__details
+      display: none
+
+    .route__point
+      margin-bottom: 0
+
+    &:hover
+      background-color: $light-grey
+      cursor: pointer
+
+      *
+        color: #fff!important
+
+  &.-selectable
+
+    &:hover
+      cursor: pointer
+      background-color: $green
+      color: #fff !important
+
+  &.-button
+    background-color: $green
+    color: #fff
+    font-size: 1.25em
+    line-height: 1
+    padding-bottom: 4%
+    padding-top: 4%
+    text-align: center
+    text-decoration: none
+
+    &.-hollow
+      color: $green
+      border: 1px solid $green
+      background-color: transparent
+      text-align: left
+
+.route__header
+  margin-bottom: 0
+
+.route__point
+  float: left
+  position: relative
+  margin-bottom: 1em
+
+  &.-from
+    margin-right: 35px
+
+    &:after
+      content: "→"
+      position: absolute
+      font-size: 1.25em
+      line-height: 16px
+      right: -1.7em
+      color: $grey
+      top: 0.1em
+
+.route__point__title
+  font-size: 1.5em
+
+.route__pool
+  +list-basic
+
+  li
+    &:before
+      color: $light-grey
+
+.route__actions
+  display: block
+
+  .button
+    display: inline-block

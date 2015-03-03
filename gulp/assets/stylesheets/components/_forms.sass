@@ -6,6 +6,7 @@
   +transition
   padding: 0.6em
   width: 100%
+  -webkit-appearance: none
 
   &.-text,
   &.-textarea
@@ -20,6 +21,12 @@
   &:focus
     background: #fff
     border: 1px solid $green
+
+  &[disabled]
+    background: $lighter-grey
+    box-shadow: 0 !important
+    opacity: 0.75
+    pointer-events: none
 
 .label
   display: block

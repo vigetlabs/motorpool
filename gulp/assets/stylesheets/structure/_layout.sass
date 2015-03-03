@@ -1,28 +1,60 @@
-
-// Rows
-
-.row
-  +row
-
-// Content Wrapper
-
-.wrap
-  +wrap
-
-
-// Grid
-
-@for $i from 1 through $total-columns
-  .span-#{$i}
-    +span($i)
-
-  .offset-#{$i}
-    +offset($i)
-
-  .offset-#{$i}:not(:first-child)
-    margin-left: ($column-width * $i) + ($column-gutter * ($i + 1)) !important
-
-.span-#{$total-columns}
-  margin-left: 0
+html,
+body
+  -webkit-overflow-scrolling: none
+  height: 100%
+  overflow: hidden
+  position: relative
   width: 100%
 
+.page
+  -webkit-overflow-scrolling: touch
+  bottom: 0
+  left: 0
+  overflow: auto
+  position: absolute
+  right: 0
+  top: 0
+
+.flex
+  align-items: stretch
+  display: flex
+  flex-direction: column
+
+  > .container
+    margin: 0
+
+  > *
+    flex: 1
+
+.container
+  margin: auto
+  padding: 0 2%
+  position: relative
+
+  +breakpoint($tablet)
+    max-width: 1400px
+    padding: 0 3%
+
+.site-main
+  top: $nav-height
+
+.site-nav
+  bottom: auto
+  height: $nav-height
+
+.page-header
+  margin: 3% 2%
+
+  h2
+    color: $charcoal
+
+.site-nav-title
+  background-color: $green
+  color: #fff
+  display: block
+  font-size: 16px
+  font-weight: 500
+  margin: 0
+  overflow: hidden
+  padding: 5px
+  text-align: center

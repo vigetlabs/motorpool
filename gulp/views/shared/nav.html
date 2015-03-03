@@ -1,0 +1,42 @@
+<nav class="site-nav page">
+  <div class="flex">
+    <header class="site-nav__header">
+      <h1 class="site-logo flex-column">
+        <a href="/" class="icon -logo">
+          <span class="screenreader">Motorpool</span>
+        </a>
+      </h1>
+
+      <div class="flex-column">
+        {#
+        <form class="search-bar" action="">
+          <input type="text" class="search-bar-input" placeholder="Search">
+          <button type="submit" class="search-bar__button icon -search"><span class="screenreader">Search</span></button>
+        </form>
+        #}
+      </div>
+
+      <button class="site-nav__toggle icon -menu flex-column">
+        <span class="screenreader">Toggle Nav</span>
+      </button>
+    </header>
+
+    <div class="site-nav__content">
+      <nav>
+        <ul class="site-nav__links" role="navigation">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="event-form.html">event-form</a></li>
+          <li><a href="event-routes.html">route-form</a></li>
+          <li><a href="event-dashboard.html">event-dashboard</a></li>
+          <li>—</li>
+          <li><a href="signup.html">signup</a></li>
+          <li><a href="user-event-routes.html">User Event Routes</a></li>
+          <li><a href="user-vehicle-assignment.html">user-vehicle-assignment</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+
+        <a href="#TODO" class="button -green">Create New Event</a>
+      </nav>
+    </div>
+  </div>
+</nav>
